@@ -1,0 +1,43 @@
+.searchDiv{
+    margin-left: 24%;
+}
+.searchDiv span{
+  font-weight: bold;
+  font-size: 14px;
+}
+.searchDiv input{
+  width:50%;
+}
+.loadingIcon{
+  margin-top: 20px;
+}
+.content{
+  /*margin-left: 24%;*/
+  margin-top:2%;
+}
+.planet{
+    border: 1px solid lightgrey;
+    background-color: cornflowerblue;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 27px;
+    cursor: pointer;
+}
+.modalPopup{
+  position          : 'fixed';
+    top               : 2px;
+    left              : 2px;
+    right             : 2px;
+    bottom            : 2px;
+    backgroundColor   : 'rgba(255, 255, 255, 0.75)';
+}
+
+.modalChild ul li span:first-child{
+  font-weight: bold;
+}
+.dashboard{
+  background-color: lightgray;
+  padding: 55px;
+  margin-top: -20px;
+  height: 100%;
+}

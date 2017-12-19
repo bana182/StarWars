@@ -1,0 +1,23 @@
+.LoginPage{
+  border: 1px solid lightgrey;
+margin-top: -24px;
+background-color: #ec5656;
+padding: 148px;
+}
+.loginFormDiv{
+  width: 50%;
+  margin-left: 28%;
+/* text-align: -webkit-auto; */
+  border: 1px solid;
+  padding: 44px;
+  background-color: lightgray;
+}
+.error{
+  color:red;
+}
+.loginlabel{
+  text-align: center;
+  font-size: xx-large;
+  font-family: -webkit-pictograph;
+  font-weight: bolder;
+}
