@@ -2,6 +2,10 @@
   "name": "tree123-app",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.9.0",
+    "node": "10.16.3"
+  },
   "dependencies": {
     "axios": "^0.17.1",
     "bootstrap": "^3.3.7",

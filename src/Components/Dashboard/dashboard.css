@@ -16,14 +16,10 @@
   margin-top:2%;
   display: inline-block;
 }
-/*.planet{
-    border: 1px solid lightgrey;
-    background-color: cornflowerblue;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 27px;
-    cursor: pointer;
-}*/
+.formDiv{
+  width: 50%;
+  margin-left: 20%;
+}
 
 .modalPopup{
   position          : 'fixed';

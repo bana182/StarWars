@@ -87,10 +87,10 @@ class Login extends Component{
 
     return(
         <div className="dashboard">
-          <div className="searchDiv">
-            <span>Search: </span>
-            <input type="text" placeholder="planet search" onChange={this.searchText}/>
-          </div>
+        <div className="form-group formDiv">
+        <label>Search</label>
+        <input type="text" onChange={this.searchText} className="form-control" placeholder="Search Planet" />
+        </div>
           <div className="content">
             {
               planetName!==""
@@ -100,8 +100,7 @@ class Login extends Component{
                 {this.generateFilteredList()}
               </div>
             </div>
-            :
-            <div style={{"text-align":"center"}}><span>search planet for generating the list</span></div>
+            : ''
           }
           </div>
           {openDetailPopUp===true?<Modal isOpen={openDetailPopUp} onClose={this.handleClose}>
