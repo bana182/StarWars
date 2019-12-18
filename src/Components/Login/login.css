@@ -1,7 +1,6 @@
 .LoginPage{
   border: 1px solid lightgrey;
 margin-top: -24px;
-background-color: #ec5656;
 padding: 148px;
 }
 .loginFormDiv{
@@ -11,6 +10,7 @@ padding: 148px;
   border: 1px solid;
   padding: 44px;
   background-color: lightgray;
+  box-shadow: -14px 22px;
 }
 .error{
   color:red;

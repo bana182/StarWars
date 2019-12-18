@@ -13,43 +13,44 @@ class DashboardContainer extends Component{
         count:-1,
         loading:true
     }
-    this.logOut=this.logOut.bind(this);
   }
-  componentDidMount(){
+  componentDidMount = () => {
     this.getAllData("https://swapi.co/api/planets/");
   }
-  getAllData(url){
-    let _this=this;
-
-    let allData=this.state.planetData;
+  getAllData = (url) => {
+    const { count, planetData } = this.state;
+    let allData= planetData;
       axios.get(url)
-    .then(function (response) {
-      for(let i=0;i<response.data.results.length;i++){
-        allData.push(response.data.results[i]);
+    .then( (response) => {
+      const { data: { results } } = response
+      for(let i=0;i<results.length;i++){
+        allData.push(results[i]);
       }
-      if(allData.length!==_this.state.count){
-        _this.setState({planetData:allData,count:response.data.count});
+      if(allData.length!== count){
+        this.setState({planetData:allData,count:response.data.count});
       }else{
-        _this.setState({planetData:allData,count:response.data.count,loading:false});
+        this.setState({planetData:allData,count:response.data.count,loading:false});
       }
 
       if(response.data.next){
-        _this.getAllData(response.data.next)
+        this.getAllData(response.data.next)
       }
     })
-    .catch(function (error) {
+    .catch( (error) => {
       console.log(error);
     });
   }
-  logOut(){
-    this.props.history.push("/");
+  logOut = () => {
+    const { history } = this.props;
+    history.push("/");
   }
   render(){
+    const { planetData, loading } = this.state
     return(
         <div>
           <Header pageActive="dashboard" logOut={this.logOut}/>
-          {this.state.planetData.length===this.state.count?<div><Dashboard planetData={this.state.planetData}/></div>:""}
-          {this.state.loading===true?<center><div className="loadingIcon"><ReactLoading type="bars" color="#444"/></div></center>:""}
+          {planetData.length===this.state.count ? <div><Dashboard planetData={planetData}/></div> : ""}
+          {loading===true?<center><div className="loadingIcon"><ReactLoading type="bars" color="#444"/></div></center>:""}
         </div>
     );
   }

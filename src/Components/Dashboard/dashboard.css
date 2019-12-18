@@ -14,15 +14,17 @@
 .content{
   /*margin-left: 24%;*/
   margin-top:2%;
+  display: inline-block;
 }
-.planet{
+/*.planet{
     border: 1px solid lightgrey;
     background-color: cornflowerblue;
     box-sizing: border-box;
     text-align: center;
     padding: 27px;
     cursor: pointer;
-}
+}*/
+
 .modalPopup{
   position          : 'fixed';
     top               : 2px;
@@ -32,11 +34,17 @@
     backgroundColor   : 'rgba(255, 255, 255, 0.75)';
 }
 
+.restCards {
+  background-color: white
+}
+.modalChild {
+  color: black;
+}
 .modalChild ul li span:first-child{
   font-weight: bold;
 }
 .dashboard{
-  background-color: lightgray;
+  background-color: lightgrey;
   padding: 55px;
   margin-top: -20px;
   height: 100%;

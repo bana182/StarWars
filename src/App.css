@@ -18,6 +18,13 @@
   height: 80px;
 }
 
+.App-Div {
+  background-image: url(starWars.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: black;
+}
 .App-header {
   background-color: #222;
   height: 150px;
